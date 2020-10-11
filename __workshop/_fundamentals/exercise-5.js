@@ -87,7 +87,16 @@ const staffMembers = [
 
 const getData = (arr, key, val) => {
   // return something
+  let newArray = arr.filter(item => {
+    if ((typeof item[key] == "string" && item[key] === val) || (typeof item[key] == "number" && item[key] >= val)) {
+      return true;
+    } else {
+      return false;
+    }
+  })
+      return newArray;
 };
+
 
 // 2. Do a console.log to verify your function.
 

@@ -21,7 +21,29 @@ const people = [
 
 function avgAge(peopleArr) {
   // return something
+  let allAges = [];
+  let sum = 0;
+  peopleArr.filter((person) => {
+    allAges.push(person.age);
+  })
+  
+  allAges.map(age => {
+    return sum += age;
+  })
+  
+  let avgAge = sum / allAges.length;
+
+  return Math.round(avgAge);
 }
+
+console.log(avgAge([
+  { name: { first: "Alyssa", middle: "P.", last: "Hacker" }, age: 26 },
+  { name: { first: "Ben", last: "Bitdiddle" }, age: 34 },
+  { name: { first: "Eva", middle: "Lu", last: "Ator" }, age: 40 },
+  { name: { first: "Lem", middle: "E.", last: "Tweakit" }, age: 45 },
+  { name: { first: "Louis", last: "Reasoner" }, age: 21 },
+  { name: { first: "Shahan", middle: "Haig", last: "Krakirian" }, age: 21 },
+]));
 
 // 2. Do a console.log to verify your function.
 

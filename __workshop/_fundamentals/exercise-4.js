@@ -19,6 +19,15 @@ const people = [
 
 function olderPeople(peopleArr, age) {
   // return something
+
+  const oldPeople = []
+const newArray = peopleArr.filter(person => {
+  if(person.age > age) {
+    oldPeople.push(person);
+  }
+})
+return oldPeople;
+
 }
 
 // 2. Do a console.log to verify your function.

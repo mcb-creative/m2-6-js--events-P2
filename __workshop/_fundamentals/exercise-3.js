@@ -19,6 +19,18 @@ const people = [
 
 function fullName(peopleArr) {
   // return something
+
+const firstLast = [];
+peopleArr.filter(person => {
+  if (person.name.middle === undefined) {
+    firstLast.push(`${person.name.first} ${person.name.last}`)
+  } else {
+    firstLast.push(`${person.name.first} ${person.name.middle} ${person.name.last}`)
+  }
+});
+
+return firstLast;
+
 }
 
 // 2. Do a console.log to verify your function.
